@@ -5,6 +5,6 @@
 >Simple web application built with React.
 >Created for cinematography portfolio representation.
 
-### You can check deployed demo at [vybornyy.com][url].
+**You can check deployed demo at [vybornyy.com][url].**
 
 [url]: https://vybornyy.com/
