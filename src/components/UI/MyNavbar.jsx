@@ -9,6 +9,7 @@ import { routes } from '../../routes'
 const MyNavbar = () => {
   const navigate = useNavigate()
   const location = useLocation()
+  const width = window.innerWidth
 
   const links = routes.map((route)=>{
     if (route.path == '/') {
@@ -28,27 +29,22 @@ const MyNavbar = () => {
     )
   })
 
+
+
   return (
     <Navbar>
       <Container>
         <Navbar.Brand>
-          <Link to={'/'}>vybornyy</Link>
-          <span className="text-secondary"> | cinematography</span >
+          {width > 576
+            ? (<>
+              <Link to={'/'}>Misha Vybornyy</Link>
+              <span className="text-secondary"> | cinematography</span >
+            </>)
+            : <></>
+          }
         </Navbar.Brand>
         <Navbar.Collapse className="justify-content-end">
           {links}
-          <Navbar.Text>
-
-            {/*
-            <p className="text-light">some link</p>
-            <Link to={'/'}>
-              <h6 className="text-light">some link</h6>
-            </Link>
-            <Link to={'/'}>
-              some another link
-            </Link> */}
-
-          </Navbar.Text>
         </Navbar.Collapse>
       </Container>
     </Navbar>

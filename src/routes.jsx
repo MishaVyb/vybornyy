@@ -18,28 +18,24 @@ export const routes =
       },
       {
         path: '/shortfilms',
-        //element: <ShortfilmsPage />,
-        element: <Navigate to='/' replace/>,
+        element: <ShortfilmsPage />,
         title: 'short films'
       },
       {
         path: '/musicvideos',
-        //element: <MusicVideosPage />,
-        element: <Navigate to='/' replace/>,
+        element: <MusicVideosPage />,
         title: 'music videos'
       },
       {
         path: '/commercials',
-        //element: <CommercialsPage />,
-        element: <Navigate to='/' replace/>,
+        element: <CommercialsPage />,
         title: 'commercials'
       },
-      {
-        path: '/stills',
-        //element: <StillsPage />,
-        element: <Navigate to='/' replace/>,
-        title: 'stills'
-      },
+      // {
+      //   path: '/stills',
+      //   element: <StillsPage />,
+      //   title: 'stills'
+      // },
       {
         path: '/contacts',
         element: <ContactsPage />,

@@ -3,9 +3,9 @@ import React from 'react'
 import FrameGroup from '../components/FrameGroup'
 import ImageCol from '../components/ImageCol'
 
-import bicycle1 from '../media/images/bicycle1.png'
-import bicycle2 from '../media/images/bicycle2.png'
-import bicycle3 from '../media/images/bicycle5.png'
+import bicycle1 from '../media/images/bicycle1.jpg'
+import bicycle2 from '../media/images/bicycle2.jpg'
+import bicycle3 from '../media/images/bicycle5.jpg'
 
 const Bicycle = () => {
   const name = 'bicycle'

@@ -22,7 +22,7 @@ const ContactsPage = () => {
 
       <ul className="list-unstyled w-75 position-absolute top-37 start-55 p-5">
         <li>+7 (916) 397-81-42</li>
-        <li><a href='mailto:vbrn.mv@gmail.com'>vbrn.mv@gmail.com</a></li>
+        <li><a href='mailto:misha.vybornyy@gmail.com'>misha.vybornyy@gmail.com</a></li>
         <br></br>
         <li><a href='t.me/mishaviborniy'>t.me/mishaviborniy</a></li>
         <li><a href='instagram.com/misha.vib'>instagram.com/misha.vib</a></li>

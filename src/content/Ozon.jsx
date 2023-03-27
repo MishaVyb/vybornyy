@@ -1,4 +1,5 @@
 import React from 'react'
+import { Row } from 'react-bootstrap'
 import FrameGroup from '../components/FrameGroup'
 import ImageCol from '../components/ImageCol'
 
@@ -11,14 +12,18 @@ const Ozon = () => {
   const name = 'ozon'
   const title = 'Ozon Express'
   const subtitle = 'dericted by Polina Varfolomeeva'
-  const titlePosition = 'top-70 start-20'
+  const titlePosition = 'top-20 start-80'
 
   return (
     <FrameGroup name={name} title={title} subtitle={subtitle} titlePosition={titlePosition}>
-      <ImageCol src={ozon1}/>
-      <ImageCol src={ozon2}/>
-      <ImageCol src={ozon3}/>
-      <ImageCol src={ozon4}/>
+      <Row>
+        <ImageCol src={ozon1}/>
+      </Row>
+      <Row>
+        <ImageCol src={ozon2}/>
+        <ImageCol src={ozon4}/>
+        <ImageCol src={ozon3}/>
+      </Row>
     </FrameGroup>
   )
 }

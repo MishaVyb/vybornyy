@@ -19,8 +19,8 @@ const IndexPage = () => {
       </Row>
       <LusKinder/>
       <Truck/>
-      <Bicycle/>
       <Ozon/>
+      <Bicycle/>
     </Container>
   )
 }

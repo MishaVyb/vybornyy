@@ -3,7 +3,7 @@ import { Col } from 'react-bootstrap'
 import FrameGroup from '../components/FrameGroup'
 import ImageCol from '../components/ImageCol'
 
-import truck1 from '../media/images/truck1-with-reward.png'
+import truck1 from '../media/images/truck1-with-reward.jpg'
 import truck2 from '../media/images/truck2.jpg'
 import truck3 from '../media/images/truck3.jpg'
 import truck4 from '../media/images/truck4.jpg'
