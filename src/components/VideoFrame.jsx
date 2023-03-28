@@ -2,47 +2,69 @@ import React from 'react'
 import classes from './VideoFrame.module.css'
 
 const ids = {
-  showreel: 316403833,
-  luskinder: 560488113,
-  bicycle: 658520380,
-  truck: 643143481,
-  ozon: 620164565,
-  oneandsix: 412248372,
-  firstborn: 509656128,
-  postdisco: 648003430,
-  letyshops: 421594376,
-  burgerking: 326313771,
-  pashinin: 251364541,
-  zhivotnoe: 425507174,
-  parshuta: 627207042,
-  princes: 657764193,
-  crying: 425506892,
-  ctrlband: 394367425,
-  skillbox: 418426529,
+  showreel: 'sOD9RYKEVrc', // updated
+  luskinder: 558735718, // updated
+  bicycle: 658520380, // ok
+  truck: 643143481, // ok
+  ozon: '35JJHMJgL2I', // updated
+  oneandsix: 'IIs601KobR4',
+  firstborn: 509656128, // unawaliable
+  postdisco: 648003430, // ok
+  letyshops: 421594376, // unawaliable
+  burgerking: 326313771, // unawaliable
+  pashinin: 251364541, // unawaliable
+  zhivotnoe: 'oCgII1NrdO4',
+  parshuta: 627207042, // ok
+  princes: 657764193, // ok
+  crying: 425506892, // unawaliable
+  ctrlband: 394367425, // unawaliable
+  skillbox: 'm3zj8xv4Cf4', // updated
 }
 
+
+// for private videos
 const hs = {
-  parshuta: 'a5aaf3e3be',
-  letyshops: '4f4db09b4c',
-  burgerking: 'e4764ae881',
-  crying: '4fa55262ae',
+  // parshuta: 'a5aaf3e3be',
 }
-
-
 
 const VideoFrame = ({name}) => {
   const id = ids[name]
-  const h = hs[name] || '88b5817c41'
-  const link = `https://player.vimeo.com/video/${id}?h=${h}&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479`
+  const isYouTubeVideo = (typeof id == 'string')
+
+  if (!id) {
+    return <></>
+  }
+
+  var link
+  if (isYouTubeVideo) {
+    link = `https://www.youtube.com/embed/${id}?controls=1&autoplay=1&mute=1`
+  } else {
+    const h = hs[name] || '88b5817c41'
+    link = `https://player.vimeo.com/video/${id}?h=${h}&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479`
+  }
 
   console.log('video at:', link)
 
-  if (!id) {
-    return <h1>No video</h1>
+
+  if (isYouTubeVideo)
+  {
+    return (
+      <div>
+        <div className={classes.videoContainer}>
+          <iframe
+            width="860"
+            height="415"
+            src={link}
+            // title="YouTube video player"
+            // frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+      </div>
+    )
   }
-
-
-
   return (
     <div>
       <div
@@ -53,13 +75,15 @@ const VideoFrame = ({name}) => {
           src={link}
           frameBorder="0"
           allow="autoplay; fullscreen; picture-in-picture"
-          //allowFullScreen
-          title="cinematography reel">
+          allowFullScreen
+          // title="cinematography reel"
+        >
         </iframe>
       </div>
       <script src="https://player.vimeo.com/api/player.js"></script>
     </div>
   )
+
 }
 
 
